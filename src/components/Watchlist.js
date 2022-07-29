@@ -8,12 +8,19 @@ const Watchlist = () => {
       <div className='container'>
         <div className='header'>
           <h1 className='heading'>My Watchlist</h1>
+          {watchlist.length >0?(
+            <span className='count-pill'>
+            {watchlist.length} {watchlist.length === 1 ? "Movie" :"Movies"}
+          </span>
+          ):(
+            ""
+          )}
         </div>
 
         {watchlist.length >0 ? (
           <div className='movie-grid'>
           {watchlist.map((movie) => (
-            <MovieCard movie={movie} type="watched" key={movie.id}/>
+            <MovieCard movie={movie} type="watchlist" key={movie.id}/>
           ))}
         </div>
         ): (

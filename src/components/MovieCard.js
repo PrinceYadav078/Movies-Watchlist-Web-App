@@ -1,4 +1,5 @@
 import React from 'react'
+import MovieControl from './MovieControl'
 
 const MovieCard = ({movie, type}) => {
   return (
@@ -10,6 +11,8 @@ const MovieCard = ({movie, type}) => {
             ): (
                 <div className='filler-poster'></div>
             )}
+
+            <MovieControl type={type} movie={movie} />
     </div>
   )
 }
